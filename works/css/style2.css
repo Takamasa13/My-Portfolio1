@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    font-size:14px;
+    text-align: center;
+}
+
+img{
+    width:100vw;
+    height:auto;
+}
+
+.main-info h1{
+    font-size: 1.5em;
+    margin: 30px 0 10px;
+}
+
+
+
+footer{
+    font-weight: bolder;
+    background:gray;
+    display: flex;
+    justify-content:space-around;
+    line-height: 0.2;
+    padding-bottom: 5px;
+}
