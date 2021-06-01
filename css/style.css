@@ -117,10 +117,23 @@ main{
 
 .about-menu{
     display: flex;
+    justify-content: space-around;
 }
+
+.skill > h1{
+    font-size: 2em;
+}
+
 
 .my-info{
     display: block;
+}
+
+.my-info h1{
+    font-size: 2em;
+}
+.profile{
+    margin-top: 70px;
 }
 
 .contact-title h1{
@@ -206,6 +219,15 @@ footer{
 
     .works-list img {
         width:100%;
+    }
+
+
+    .about-menu{
+        display: block;
+    }
+
+    .my-info{
+        margin-top: 70px;
     }
 
     .contact-menu{
