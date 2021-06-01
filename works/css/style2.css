@@ -19,12 +19,24 @@ img{
 }
 
 
+.page-top{
+    list-style: none;
+    color:white;
+    background: rgb(50, 50, 50);
+}
+
+.page-top a{
+    text-decoration: none;
+    color:white;
+}
+
+
 
 footer{
-    font-weight: bolder;
-    background:gray;
-    display: flex;
-    justify-content:space-around;
-    line-height: 0.2;
-    padding-bottom: 5px;
+        font-weight: bolder;
+        background:gray;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+    
 }

@@ -9,6 +9,8 @@
   <meta property='og:description' content='Takamasa Ashizawaのポートフォリオサイトです。'>
   <meta property="og:image" content="img/ogp.png">
   <meta name="description" content="Takamasa Ashizawaのポートフォリオサイトです" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Takamasa Ashizawa</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,14 +19,39 @@
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      // #で始まるリンクをクリックしたら実行されます
+      $('a[href^="#"]').click(function() {
+        // スクロールの速度
+        let speed = 500; // ミリ秒で記述
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ9LN0VFV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TJ9LN0VFV0');
+</script>
 </head>
 
 <body>
   <div class="wrapper">
 
     <!-- header -->
-    <header class="header ">
-        <h1>
+    <header class="header">
+        <h1 id="index">
           Takamasa Ashizawa
         </h1>
         
@@ -56,9 +83,9 @@
     <!-- menu -->
     <div class="container">
       <ul class="menu-list">
-        <li><a href="#" class="active" data-id="works">WORKS</a></li>
-        <li><a href="#" data-id="about">ABOUT</a></li>
-        <li><a href="#" data-id="contact">CONTACT</a></li>
+        <li><a href="" class="active" data-id="works">WORKS</a></li>
+        <li><a href="" data-id="about">ABOUT</a></li>
+        <li><a href="" data-id="contact">CONTACT</a></li>
       </ul>
 
 
@@ -77,19 +104,40 @@
       </section>
 
       <section class="content" id="about">
-        <h1>SKILL</h1>
-        <div class="skill">
-          <dl>
-            <dt><h1>HTML/CSS</h1></dt>
-            <dd><P>テキストが入ります。</P></dd>
+        <div class="about-menu">
+
+          <div class="skill">
+            <h1>SKILL</h1>
+            <dl>
+              <dt><h1>HTML/CSS</h1></dt>
+              <dd><P>テキストが入ります。</P></dd>
+              
+              <dt><h1>java script</h1></dt>
+              <dd>テキストが入ります。</P></dd>
+              
+              <dt><h1>PHP</h1></dt>
+              <dd>テキストが入ります。</P></dd>
+            </dl>
+          </div>
+          
+          <div class="my-info">
+            <div class="career">
+              <h1>CAREER</h1>
+              <p>2021∼ フリーランスエンジニアとして活動</p>
+            </div>
             
-            <dt><h1>java script</h1></dt>
-            <dd>テキストが入ります。</P></dd>
-            
-            <dt><h1>PHP</h1></dt>
-            <dd>テキストが入ります。</P></dd>
-          </dl>
+            <div class="profile">
+              <h1>PROFILE</h1>
+              <p>1995年生まれ。　山梨県出身
+                専門学校で鍼灸師の資格取得後、
+                鍼灸整骨院で勤務。
+                その後2021年∼フリーランスエンジニアとして活動中。
+              </p>
+              
+            </div>
+          </div>
         </div>
+
       </section>
 
       <section class="content" id="contact">
@@ -120,20 +168,13 @@
     </div>
     <!-- /menu -->
     
-    <!-- <div class="page-top">
-      <p><a href="#">page top</a></p>
-    </div> -->
+    <div class="page-top">
+      <a class="botton" href="#index">page top</a>
+    </div>
     
     <!-- footer -->
     <footer class="footer">
-      <div class="name">
-        <p>Takamasa Ashizawa</p>
-        <p>1995年　　山梨出身</p>
-      </div>
-      <div class="adress">
-        <p>現住所</p>
-        <p>○○県○○市1-2-3</p>
-      </div>
+     <p>&copy;Takamasa Ashiwawa</p>
     </footer>
     <!-- /footer -->
 
